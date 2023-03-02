@@ -1,0 +1,45 @@
+body {
+    background-image: url(../images/imgcrear\.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+.formulario-crearPost {
+    margin: 0 auto; /* Centramos el formulario */
+    width: 500px;   /* Sin ancho no podemos centrar el formulario */
+    background-color: rgba(0, 0, 0, 0.493); /* Color blanco para el formulario */
+    padding: 2px; /* separamos los bordes del form del resto de elementos */
+    border-radius: 15px; /* Redondeamos los bordes del form */
+ }
+
+input, textarea {
+    display : block;
+    padding: 5px; /* Separamos la letra del interior (contenido) en los inputs de los bordes */
+    overflow: auto;
+    border-right: 1px solid;
+}
+
+label {
+    display: block; /* Ahora los inputs quedan debajo de los label */
+    padding: 5px; /* Separando espacios internos */
+}
+
+li {
+    margin: 10px; /* dando márgenes a todos los elementos de la lista */
+}
+
+.btn{
+    margin-top: 20px; /* Damos un margen individual para el contenedor del botón */
+}
+
+button {
+    width: 100%; 
+    background-color: rgb(48, 175, 22);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}

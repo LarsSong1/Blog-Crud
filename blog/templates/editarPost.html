@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block postcontenido %}
+<link rel="stylesheet" href="{% static 'css/editarpost.css' %}">
+{% block titulopagina %}
+Editar Publicación
+{% endblock titulopagina %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 class="text-center editar-objeto">Editar Post</h1>
+  <form method="post" class='formulario-editarPost'>
+    {% csrf_token %}
+    
+    {{ editar.as_table }}
+
+    <input type="submit" value="Actualizar" class="btn btn-warning">
+  </form>
+
+{% endblock postcontenido %}
+
+

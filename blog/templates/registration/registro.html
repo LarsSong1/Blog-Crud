@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+    <div class="grid flex">
+      
+        <form  action="" method="POST" class="form login">
+          
+          <header class="login__header">
+            <h3 class="login__title">Registro</h3>
+          </header>
+        
+          <div class="login__body">
+            {% csrf_token %}
+            {{ datos }}
+    
+          </div>
+    
+          <footer class="login__footer">
+            <input type="submit" value="Registrate">
+    
+            <p><span class="icon icon--info">?</span><a href="#">Forgot Password</a></p>
+          </footer>
+    
+        </form>
+    
+      </div>
+</body>
+</html>
