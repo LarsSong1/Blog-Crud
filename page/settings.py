@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-t9_4b8w^*9^t$2wu6f0rz!_7j4t17!5hanlb=4816o5@dc)$09
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 MESSAGE_STORAGE= "django.contrib.messages.storage.cookie.CookieStorage"
 
@@ -125,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
