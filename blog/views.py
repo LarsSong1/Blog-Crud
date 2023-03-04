@@ -7,6 +7,7 @@ from .forms import registroForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models import Q
 
 
 
@@ -16,8 +17,14 @@ from django.contrib import messages
 
 
 def blog(request):
+    queryset = request.GET.get("buscar")
     post = Blog.objects.all()
     print(post)
+    if queryset:
+        post = Blog.objects.filter(
+            Q(titulo__icontains = queryset) |
+            Q(subtitulo__icontains = queryset)
+        ).distinct()
     return render(request, 'blog.html', {'post': post})
 
 
